@@ -1,0 +1,7 @@
+<%= simple_form_for [@reviewable_item, @review] do |f| %>
+  <%= f.input :reviewer, label: false, input_html: {placeholder: "Name"} %>
+  <%= f.input :rating, label: false, input_html: {placeholder: "Rating"} %>
+  <%= f.input :review, label: false, as: :text, input_html: {placeholder: "Review"} %>
+  <%= f.submit 'Submit'.html_safe, class: 'btn btn-lg btn-primary' %>
+  <%= link_to 'Cancel', :back, class: 'btn btn-lg btn-default' %>
+<% end %>
